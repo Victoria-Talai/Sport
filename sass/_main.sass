@@ -1,0 +1,337 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body
+    margin: 0
+    padding: 0
+// bara de navigare
+.nav-bar
+    width: 100%
+    height: 100px
+    background-color: $black
+    color: $white
+    padding: 15px 15px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    text-align: center
+    align-items: center
+.logo
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    gap: 15px
+.logo h4
+    font-size: 30px
+    text-transform: uppercase
+.links .active
+    color: $red
+.links ul
+    display: flex
+    flex-direction: row
+    gap: 40px
+    list-style-type: none
+    a
+        text-decoration: none
+        font-size: 20px
+        color: $white
+    a:hover
+        text-decoration: underline
+.log-in
+    color: $black
+    button
+        padding: 5px 30px
+        background-color: $bej
+        border-radius: 10px
+        a
+            font-size: 20px
+            color: $white
+            text-decoration: none
+// burger
+.container
+    max-width: 1050px
+    width: 90%
+    margin: auto
+    .nav-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 62px
+        li
+            list-style: none
+            a
+                text-decoration: none
+                color: $white
+                font-weight: 500
+                font-size: 1.2rem
+                padding: 0.7rem
+.nav-container
+    display: block
+    position: relative
+    height: 60px
+    .checkbox
+        position: absolute
+        display: block
+        height: 32px
+        width: 32px
+        top: 20px
+        left: 20px
+        z-index: 102
+        opacity: 0
+        cursor: pointer
+.hamburger-lines
+    display: block
+    height: 26px
+    width: 32px
+    position: absolute
+    top: 17px
+    left: 20px
+    z-index: 101
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .line
+        display: block
+        height: 4px
+        width: 100%
+        border-radius: 10px
+        background: #0e2431
+    .line1
+        transform-origin: 0% 0%
+        transition: transform 0.4s ease-in-out
+    .line2
+        transition: transform 0.2s ease-in-out
+    .line3
+        transform-origin: 0% 100%
+        transition: transform 0.4s ease-in-out
+.navbar
+    width: 100%
+    background-color: $cyan
+    .menu-items
+        padding-top: 100px
+        height: 100vh
+        width: 100%
+        max-width: 300px
+        transform: translate(-150%)
+        display: flex
+        flex-direction: column
+        margin-left: -40px
+        padding-left: 50px
+        transition: transform 0.5s ease-in-out
+        text-align: center
+        background-color: $cyan
+        z-index: 100
+        position: fixed
+        top: 0
+        a.active
+            color: blue
+        li
+            list-style: none
+            margin-bottom: 20px
+            font-size: 20px
+            font-weight: 500
+            border-bottom: 1px solid $blue
+            a
+                text-decoration: none
+                color: $blue
+            a:hover
+                color: $red
+                text-decoration: dashed
+.contacs
+    position: absolute
+    top: 17px
+    right: 15px
+    font-size: 20px
+    border-radius: 5px
+    a
+        text-decoration: none
+        color: $black
+    a:hover
+        color: $red
+.nav-container input[type="checkbox"]:checked ~ .menu-items
+    transform: translateX(0)
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1
+    transform: rotate(45deg)
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2
+    transform: scaleY(0)
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3
+    transform: rotate(-45deg)
+
+// index.html
+#left-img
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    gap: 40px
+    margin-top: 20px
+#imagini img
+    position: relative
+    margin: 41px 0
+    height: 500px
+    width: 650px
+    border: 10px solid $red
+#imagini h3
+    font-size: 50px
+    color: $red
+    position: absolute
+    top: 550px
+    left: 210px
+#img1 img
+    width: 700px
+    height: 500px
+    position: relative
+#sport-img
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 40px
+    margin-top: 20px
+#imagini2 img
+    position: relative
+    margin: 41px 0
+    height: 300px
+    width: 450px
+    border: 10px solid $red
+#imagini h3
+    font-size: 50px
+    color: $red
+    position: absolute
+    top: 550px
+    left: 210px
+#img2 img
+    width: 450px
+    height: 300px
+// evenimente
+.wrap
+    padding: 40px 0 20px 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 80px
+    h1
+        font-size: 50px
+.sport-info p
+    text-align: justify
+    font-size: 20px
+    width: 900px
+.content
+    text-align: justify
+    padding: 20px
+// contacte
+footer
+    width: 80%
+    height: 500px
+    display: flex
+    flex-direction: row
+    margin: 100px auto
+    gap: 10px
+    border: 1px solid $red
+    background-color: rgb(23, 22, 22)
+    justify-content: space-around
+.info1
+    width: 200px
+    display: flex
+    flex-direction: column
+    gap: 10px
+    margin: auto
+    li
+        text-align: center
+        list-style: none
+        width: 200px
+        a
+            text-decoration: none
+            margin: 10px
+    p
+        text-align: center
+        margin: 10px
+        color: $red
+#social
+    display: flex
+    flex-direction: column
+    gap: 20px
+    font-size: 15px
+    margin: 10px
+i
+    margin: 10px
+.footer2
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 10px
+    height: 700px
+    justify-content: space-around
+#social1
+    display: flex
+    flex-direction: column
+    gap: 20px
+    text-align: center
+    i
+        margin: 10px
+// despre-noi
+h1
+    color: $red
+    font-size: 40px
+    text-align: center
+.text-info
+    display: flex
+    flex-direction: row
+    gap: 30px
+    text-align: justify
+    align-items: center
+    justify-content: center
+    margin: 79px
+    font-size: 20px
+.poze
+    width: 650px
+    img
+        width: 650px
+        border: 10px solid $red
+.text-info1
+    text-align: justify
+    margin: 30px
+// competiitii
+.swiper
+    width: 80%
+    height: 600px
+    margin: 20px
+    border: 5px solid $red
+    z-index: 1
+.swiper-wrapper
+    width: 80%
+    height: 600px
+.swiper-slide
+    width: 80%
+    height: 600px
+    img
+        width: 100%
+        height: 600px
+.titlu h1
+    text-align: center
+    font-size: 40px
+    margin: 10px
+    color: $red
+.paragraf
+    font-size: 20px
+    width: 1100px
+    margin: 20px auto
+    text-align: justify
+
+// footer
+.footer
+    width: 100%
+    height: 50px
+    display: flex
+    flex-direction: row
+    padding-top: 10px
+    gap: 10px
+    border: 1px solid $red
+    background-color: rgb(23, 22, 22)
+    justify-content: space-around
+#footer
+    @include footer
+    background-color: #171616
